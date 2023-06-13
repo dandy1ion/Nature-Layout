@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+}
+
+body {
+	width: 100vw;
+	font-family: "Poppins", sans-serif;
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+	background-color: #213136;
+	color: #cccccc;
+}
+
+.container {
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	scroll-snap-type: y mandatory;
+	overflow-y: scroll;
+}
+
+section {
+	max-width: 1300px;
+	min-width: 300px;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	scroll-snap-align: start;
+	scroll-snap-stop: always;
+}
+
+.banner {
+	font-size: 100px;
+}
+
+.sub-section {
+	width: 50%;
+	padding: 10px 30px;
+}
+
+.flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+img {
+	width: 500px;
+}
+
+.box {
+	width: 200px;
+	height: 200px;
+	margin: 10px;
+	background-color: #ffffff;
+	transition: all 1s ease-in-out;
+}
+
+.box:nth-child(1) {
+	z-index: 4;
+	transition-delay: 100ms;
+	transform: translateY(0);
+}
+
+.box:nth-child(2) {
+	z-index: 3;
+	background-color: #e9d3d3;
+	transition-delay: 200ms;
+	transform: translateY(100px);
+}
+
+.box:nth-child(3) {
+	z-index: 2;
+	background-color: #cc6363;
+	transition-delay: 300ms;
+	transform: translateY(200px);
+}
+
+.box:nth-child(4) {
+	z-index: 1;
+	background-color: #912020;
+	transition-delay: 400ms;
+	transform: translateY(300px);
+}
+
+.fade-in-bottom .box {
+	transform: translateY(0);
+}
+
+/*ANNIMATIONS*/
+
+[data-anime] {
+	transition: all 1s ease-in-out;
+}
+
+/* begining state */
+.hidden {
+	opacity: 0;
+	filter: blur(5px);
+}
+
+/* ending state */
+.fade-in {
+	opacity: 1;
+	filter: blur(0);
+}
+
+/* other animation options */
+/* begining state */
+.hidden-left {
+	opacity: 0;
+	filter: blur(5px);
+	transform: translateX(-200px);
+}
+
+/* begining state */
+.hidden-right {
+	opacity: 0;
+	filter: blur(5px);
+	transform: translateX(200px);
+}
+
+/* ending state  for both left&right */
+.fade-in-slide {
+	opacity: 1;
+	filter: blur(0);
+	transform: translateX(0);
+}
+
+/* starting state */
+.hidden-bottom {
+	opacity: 0;
+	filter: blur(5px);
+	transform: translateY(400px);
+}
+
+/* ending state */
+.fade-in-bottom {
+	opacity: 1;
+	filter: blur(0);
+	transform: translateY(0);
+}
